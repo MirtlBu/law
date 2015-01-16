@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta content="text/html; charset=utf-8; ru" http-equiv="Content-Type">
     <title>Юриспруденция</title>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                             Современный рынок юридических услуг настолько разнообразен, что часто бывает очень трудно найти хорошего юриста для решения насущных проблем.
                         </span>
                     </span>
-                    <button type="button" class="button slider-button">Записаться на консультацию</button>
+                    <button type="button" class="button slider-button button--red">Записаться на консультацию</button>
                 </div>
                 <div class="image">
                     <img src="img/slider-girls.png">
@@ -238,9 +239,129 @@
             <div class="headline headline--red">
                 <span>Пакеты услуг</span>
             </div>
+            <ul class="prices__content">
+                <li class="prices__item">
+                    <span class="category"><span>Лайт</span></span>
+                    <div class="item__content">
+                        <span class="title">Бесплатный</span>
+                        <ul class="advantages">
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Предоставляется бесплатно</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Действует с начала месяца</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="button button--ashes">Зарегистрироваться</button>
+                </li>
+                <li class="prices__item">
+                    <span class="category"><span>Стандарт</span></span>
+                    <div class="item__content">
+                        <span class="title">1000 руб/м</span>
+                        <ul class="advantages">
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Действует сразу</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Консультации онлайн</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Личный юрист</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="button button--ashes">Купить</button>
+                </li>
+                <li class="prices__item prices__item--active">
+                    <span class="category"><span>Бизнес</span></span>
+                    <div class="item__content">
+                        <span class="title">5000 руб/м</span>
+                        <ul class="advantages">
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Действует сразу</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Консультации онлайн</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Личные юрист и адвокат</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Оформление документов</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="button button--red">Купить</button>
+                </li>
+                <li class="prices__item">
+                    <span class="category"><span>Люкс</span></span>
+                    <div class="item__content">
+                        <span class="title">10000 руб/м</span>
+                        <ul class="advantages">
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Действует сразу</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Консультации 24 часа</span>
+                            </li>
+                            <li class="advantages__item">
+                                <img src="img/icon-checkbox.png">
+                                <span>Индивидуальный подход</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="button button--ashes">Купить</button>
+                </li>
+            </ul>
         </div>
     </div>
-
+    <div class="map">
+        <div class="grid">
+            <div class="headline headline--ashes">
+                <span>Контакты</span>
+            </div>
+            <div id="map" style="width: 100%; height: 440px"></div>
+        </div>
+    </div>
+    <div class="contacts">
+        <div class="grid">
+            <span class="title title--form">Обратная связь</span>
+            <span class="title title--address">Адрес</span>
+            <form>
+                <input type="input" placeholder="Имя">
+                <input type="input" placeholder="Почта">
+                <input type="input" placeholder="Телефон">
+                <textarea type="input" placeholder="Комментарий"></textarea>
+                <button type="submit" class="button button--red">Отправить</button>
+                <div class="clear"></div>
+            </form>
+            <ul class="address">
+                <li class="address__item">г. Москва, ул. Старая, д.34/2</li>
+                <li class="address__item">8 (495) 800-80-80</li>
+                <li class="address__item address__item--email"><a href="mailto:example@mail.com">example@mail.com</a></li>
+                <li class="address__item">
+                    <ul class="social">
+                        <li class="social__item"><a href=""><img src="img/icon-fb.png"></a></li>
+                        <li class="social__item"><a href=""><img src="img/icon-gpl.png"></a></li>
+                        <li class="social__item"><a href=""><img src="img/icon-tw.png"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
     <script src="js/script.js"></script>
