@@ -141,43 +141,45 @@ header {
         height: 10px;
         background: @color-dark-red;
     }
-}
 
-.nav {
-    height: 100%;
-    display: inline-block;
-    float: right;
-
-    ul {
+    .nav {
         height: 100%;
-    }
-
-    &__item {
         display: inline-block;
-        height: 100%;
+        float: right;
 
-        a {
-            font-size: 14px;
-            font-family: OpenSansExtraBold;
-            color: @color-light;
-            text-transform: uppercase;
-            display: block;
+        ul {
             height: 100%;
-            padding: 0 30px;
-            box-sizing: border-box;
+        }
 
-            span {
-                display: inline-block;
-                &:extend(.vertical-align);
-            }
+        &__item {
+            display: inline-block;
+            height: 100%;
 
-            &:hover {
-                background: @color-dark-red;
-                color: @color-white;
+            a {
+                font-size: 14px;
+                font-family: OpenSansExtraBold;
+                color: @color-light;
+                text-transform: uppercase;
+                display: block;
+                height: 100%;
+                padding: 0 30px;
+                box-sizing: border-box;
+
+                span {
+                    display: inline-block;
+                    &:extend(.vertical-align);
+                }
+
+                &:hover {
+                    background: @color-dark-red;
+                    color: @color-white;
+                }
             }
         }
     }
 }
+
+
 
 .phone {
     height: 100%;
@@ -383,7 +385,8 @@ header {
 .headline {
     width: 100%;
     height: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
+    position: relative;
 
     span {
         font-size: 25px;
@@ -394,14 +397,31 @@ header {
         margin-left: 30px;
         &:extend(.vertical-align);
     }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 10px;
+        height: 100%;
+    }
 }
 
 .headline--red {
     background: @color-medium-red;
+
+    &:after {
+        background: @color-dark-red;
+    }
 }
 
 .headline--ashes {
     background: @color-medium-ashes;
+
+    &:after {
+        background: @color-dark-ashes;
+    }
 }
 
 .about {
@@ -477,7 +497,7 @@ header {
         .controls {
             position: absolute;
             right: 0;
-            top: 30px;
+            top: 0;
             display: inline-block;
             height: 25px;
         }
@@ -508,10 +528,10 @@ header {
 
         li {
             display: inline-block;
+            vertical-align: top;
             padding: 10px 10px 20px 10px;
             box-sizing: border-box;
             background: @color-light-pale;
-            text-align: center;
 
             &:not(:last-child) {
                 margin-right: 25px;
@@ -540,6 +560,170 @@ header {
 
 .services {
     background: @color-light-pale;
+    padding-bottom: 50px;
+
+    &__content {
+        text-align: center;
+        margin-bottom: 50px;
+
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 165px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        img {
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-family: OpenSansSemibold;
+            color: @color-medium-red;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            font-size: 12px;
+            font-family: OpenSansRegular;
+            color: @color-dark-ashes;
+            text-align: left;
+            display: block;
+        }
+    }
+
+    .tab-nav {
+        width: 570px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 25px;
+
+        &__content {
+            background: @color-white;
+            padding: 35px;
+            box-sizing: border-box;
+            font-size: 12px;
+            font-family: OpenSansRegular;
+            color: @color-dark-ashes;
+        }
+    }
+
+    .nav {
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+
+            a {
+                display: block;
+                width: 120px;
+                padding: 10px 0;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 18px;
+                font-family: OpenSansSemibold;
+                color: @color-medium-ashes;
+                background: @color-dark-pale;
+                border-left: 5px solid @color-light-pale;
+                border-bottom: 5px solid @color-light-pale;
+            }
+        }
+
+        li.tab--active {
+
+            a {
+                color: @color-medium-red;
+                background: @color-white;
+                border-left: none;
+                border-bottom: 5px solid @color-white;
+            }
+        }
+    }
+
+    .result {
+        width: 570px;
+        display: inline-block;
+        vertical-align: top;
+
+        li:not(:first-child) {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            display: table;
+            position: relative;
+            background: @color-dark-pale;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 0;
+                width: 5px;
+                height: 100%;
+                background: @color-dark-ashes;
+            }
+        }
+
+        li:nth-child(3) {
+            .outer {
+                width: 120px;
+            }
+        }
+
+        li:nth-child(4) {
+            .outer {
+                width: 200px;
+            }
+        }
+
+        .title {
+            display: block;
+            height: 49px;
+            font-size: 25px;
+            font-family: OpenSansRegular;
+            color: @color-dark-ashes;
+        }
+
+        .name {
+            width: 200px;
+            background: @color-medium-ashes;
+            font-size: 14px;
+            font-family: OpenSansRegular;
+            color: @color-white;
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+
+        .outer {
+            height: 100%;
+            display: inline-block;
+            font-size: 14px;
+            font-family: OpenSansRegular;
+            color: @color-white;
+            background: @color-medium-red;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .inner {
+            display: block;
+            &:extend(.vertical-align);
+        }
+    }
 }
+
+.prices {
+    background: @color-dark-pale;
+}
+
+
 
 
