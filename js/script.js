@@ -1,3 +1,50 @@
+var reviews = [
+    {
+        name: 'Лариса Ивановна',
+        text: 'Позвонила в праздники, перезвонили на следующий день с утра. Все объяснили и растолковали как надо.'
+    },
+    {
+        name: 'Эраст Петрович',
+        text: 'Удобный сайт, быстро отвечают и квалифицированно консультируют! Благодарю!'
+    },
+    {
+        name: 'Анонимус',
+        text: 'Очень рад, что в России теперь предоставляется бесплатно такая квалифицированная юридическая помощь.'
+    },
+];
+
+function renderReviewBlock(review) {
+    console.log(review);
+    return $('<div/>')
+        .append($('<div/>', {'class': 'quote'}).text(review.text))
+        .append($('<span/>', {'class': 'name'}).text(review.name))
+}
+
+var counter = 0;
+
+$('.about').find('.controls').on('click', '.control', function() {
+
+    if($(this).hasClass('control--next')) {
+        counter++;
+    }
+    else if($(this).hasClass('control--prev')) {
+        counter--;
+    }
+    var index = counter%3;
+    $('.about__wrap').addClass('hidden');
+
+    setTimeout(function() {
+        $('.reviews').find('.quote').text(reviews[index].text);
+        $('.reviews').find('.name').text(reviews[index].name);
+        $('.about__wrap').removeClass('hidden');
+    }, 500)
+
+});
+
+
+
+
+
 $(window).load(function() {
     $('.slider').flexslider({
         selector: '.slides > li',

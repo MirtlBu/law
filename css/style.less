@@ -585,6 +585,15 @@ header {
             color: @color-medium-red;
         }
     }
+
+    &__wrap {
+        opacity: 1;
+        -webkit-transition: opacity .5s linear;
+    }
+
+    &__wrap.hidden {
+        opacity: 0;
+    }
 }
 
 .crew {
