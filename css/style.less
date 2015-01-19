@@ -299,6 +299,20 @@ header {
         }
     }
 
+    .flexslider {
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 10px 0 0 0;
+}
+
+.flex-viewport {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+
     .flex-direction-nav {
 
         a {
@@ -330,20 +344,6 @@ header {
     li {
         height: 100%;
     }
-}
-
-.flexslider {
-    height: 100%;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    margin: 10px 0 0 0;
-}
-
-.flex-viewport {
-    width: 1170px;
-    height: 100%;
-    margin: 0 auto;
 }
 
 .flex-direction-nav {
@@ -606,6 +606,7 @@ header {
         li {
             display: inline-block;
             vertical-align: top;
+            width: 270px;
             padding: 10px 10px 20px 10px;
             box-sizing: border-box;
             background: @color-light-pale;
@@ -823,7 +824,7 @@ header {
         }
 
         .outer {
-            height: 100%;
+            height: 40px;
             display: inline-block;
             font-size: 14px;
             font-family: OpenSansRegular;
@@ -962,6 +963,16 @@ header {
 
 .map {
     background: @color-medium-red;
+    position: relative;
+    height: 500px;
+
+    #map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
 
     .headline {
         margin-bottom: 0;
