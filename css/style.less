@@ -588,7 +588,7 @@ header {
 
     &__wrap {
         opacity: 1;
-        -webkit-transition: opacity .5s linear;
+        transition: opacity .5s linear;
     }
 
     &__wrap.hidden {
@@ -778,16 +778,8 @@ header {
             }
         }
 
-        li:nth-child(3) {
-            .outer {
-                width: 120px;
-            }
-        }
-
-        li:nth-child(4) {
-            .outer {
-                width: 200px;
-            }
+        li .outer {
+            transition: width .2s linear;
         }
 
         .title {
