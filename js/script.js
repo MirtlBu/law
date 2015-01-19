@@ -61,7 +61,7 @@ $('.services').find('.tab-nav').on('click', 'li', function(e) {
 })
 
 
-$(window).load(function() {
+$(document).ready(function() {
     $('.slider').flexslider({
         selector: '.slides > li',
         animation: 'slide',
