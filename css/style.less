@@ -585,6 +585,15 @@ header {
             color: @color-medium-red;
         }
     }
+
+    &__wrap {
+        opacity: 1;
+        transition: opacity .5s linear;
+    }
+
+    &__wrap.hidden {
+        opacity: 0;
+    }
 }
 
 .crew {
@@ -628,13 +637,15 @@ header {
     }
 
     .flex-direction-nav {
+        width: 60px;
+        height: 25px;
         position: relative;
-        top: 80%;
-        left: -25px;
+        top: 50%;
+        left: 5px;
 
         a {
             width: 25px;
-            height: 25px;
+            height: 100%;
             display: inline-block;
             margin-right: 5px;
             background-color: @color-dark-red;
@@ -767,16 +778,8 @@ header {
             }
         }
 
-        li:nth-child(3) {
-            .outer {
-                width: 120px;
-            }
-        }
-
-        li:nth-child(4) {
-            .outer {
-                width: 200px;
-            }
+        li .outer {
+            transition: width .2s linear;
         }
 
         .title {
