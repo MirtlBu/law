@@ -62,24 +62,24 @@ $('.services').find('.tab-nav').on('click', 'li', function(e) {
 
 
 $(document).ready(function() {
-    $('.slider').flexslider({
+    $('.slider__wrap').flexslider({
         selector: '.slides > li',
         animation: 'slide',
-        itemWidth: '1170',
         controlNav: false,
         animationSpeed: 1000,
-        slideshowSpeed: 8000
+        slideshow: false,
+        controlsContainer: '.slider .controls',
     });
+
     $('.crew > .grid').flexslider({
         selector: '.crew__content > li',
         animation: "slide",
-        itemWidth: 290,
+        itemWidth: 275,
+        itemMargin: 23,
         slideshow: false,
-        controlsContainer: '.crew .controls',
         controlNav: false,
         move: 1,
-        animationSpeed: 1000,
-        slideshowSpeed: 3000
+        controlsContainer: '.crew .controls',
     });
 });
 

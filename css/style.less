@@ -224,7 +224,12 @@ header {
 
 .slider {
     height: 490px;
+    position: relative;
     background: url(../img/slider-bg.jpg);
+
+    &__wrap {
+        height: 100%;
+    }
 
     &__item {
         position: relative;
@@ -299,19 +304,16 @@ header {
         }
     }
 
-    .flexslider {
-    height: 100%;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    margin: 10px 0 0 0;
-}
+    .controls {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-.flex-viewport {
-    width: 1170px;
-    height: 100%;
-    margin: 0 auto;
-}
+    .flex-viewport {
+        height: 100%;
+    }
 
     .flex-direction-nav {
 
@@ -601,20 +603,19 @@ header {
     padding-bottom: 50px;
 
     &__content {
-        text-align: center;
+
 
         li {
             display: inline-block;
             vertical-align: top;
-            width: 270px;
-            padding: 10px 10px 20px 10px;
-            box-sizing: border-box;
             background: @color-light-pale;
-            margin: 0 11px;
+            margin: 0 10px;
+            height: 340px;
+            text-align: center;
 
             img {
-                display: block;
-                margin-bottom: 15px;
+                display: inline-block;
+                margin: 10px 0;
             }
 
             .name {
