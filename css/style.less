@@ -89,6 +89,12 @@ a {
     position: relative;
 }
 
+.block {
+    width: 100%;
+    min-width: 1170px;
+    position: relative;
+}
+
 .vertical-align {
     position: relative;
     top: 50%;
@@ -154,10 +160,8 @@ a {
 }
 
 header {
-    width: 100%;
     height: 80px;
     background: @color-medium-red;
-    position: relative;
 
     &:after {
         content: '';
@@ -224,8 +228,8 @@ header {
 
 .slider {
     height: 490px;
-    position: relative;
     background: url(../img/slider-bg.jpg);
+    background-size: cover;
 
     &__wrap {
         height: 100%;
@@ -964,7 +968,6 @@ header {
 
 .map {
     background: @color-medium-red;
-    position: relative;
     height: 500px;
 
     #map {
